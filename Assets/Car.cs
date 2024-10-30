@@ -5,9 +5,6 @@ public class Car : MonoBehaviour
 {
     float speed = 0;
     Vector2 startPos;
-    void Start()
-    {
-    }
     void Update()
     {
         //(新增)取得滑動長度
@@ -21,7 +18,6 @@ public class Car : MonoBehaviour
             float swipeLength = endPos.x - startPos.x;
             speed = swipeLength / 500.0f; //把滑動長度轉換成初始移動速度
         }
-        transform.Translate(speed, 0, 0);
-        speed *= 0.98f;
     }
 }
+
